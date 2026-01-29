@@ -1,11 +1,8 @@
 # Editor
-export EDITOR='vim'
+export EDITOR='nvim'
 
 # Path
 export PATH=/usr/local/bin:$PATH
 
 # Add Postgres to the path
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
-
-# Specify your defaults in this environment variable
-export HOMEBREW_CASK_OPTS="--appdir=/Applications"
