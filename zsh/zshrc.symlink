@@ -100,7 +100,9 @@ source $ZSH/oh-my-zsh.sh
 
 alias rc='bundle exec rails c'
 alias rs='bundle exec rails s'
-alias fafftime='cd ~/Work/Projects/Faff\ Time/Repositories/fafftimev3'
+
+alias fafftime='cd ~/Work/Projects/FaffTime/Repositories/fafftime'
+alias wakeupwhen='cd ~/Work/Projects/WakeUpWhen/Repositories/wake-up-when'
 
 if [ -f ~/.zshalias ]; then
     source ~/.zshalias
@@ -122,3 +124,4 @@ export FZF_DEFAULT_OPTS='--color fg:188,bg:016,hl:103,fg+:099,bg+:016,hl+:104,in
 # Java exports
 export PATH="/opt/homebrew/opt/openjdk@17/bin:$PATH"
 export PATH="/opt/homebrew/opt/openjdk@21/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
