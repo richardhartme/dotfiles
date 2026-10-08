@@ -1,41 +1,45 @@
-[color]
-  diff = auto
-  status = auto
-  branch = auto
 [core]
   excludesfile = ~/.gitignore
   pager = less -R -X
   editor = nvim
+
+[user]
+  name = Richard Hart
+  email = richard@richardhart.me
+
+[github]
+  user = richardhartme
+
+[init]
+  defaultBranch = main
+
+[pull]
+  rebase = true
+
+[push]
+  autoSetupRemote = true
+
+[fetch]
+  prune = true
+
+[rebase]
+  autoStash = true
+
+[merge]
+  conflictstyle = zdiff3
+
+[diff]
+  colorMoved = default
+
 [alias]
   s = status
+  st = status -sb
   c = commit
   a = add
   di = diff
   dic = diff --cached
   pl = pull
-  ph = push
   plre = pull --rebase
-  out = log origin..HEAD
-  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
-  st = status -sb
-[user]
-  name = Richard Hart
-  email = richard@ur-ban.com
-[github]
-  user = Hates
-[mergetool]
-  keepBackup = true
-	prompt = false
-[difftool "Kaleidoscope"]
-	cmd = ksdiff --partial-changeset --relative-path \"$MERGED\" -- \"$LOCAL\" \"$REMOTE\"
-[diff]
-	tool = Kaleidoscope
-[difftool]
-	prompt = false
-[mergetool "Kaleidoscope"]
-	cmd = ksdiff --merge --output \"$MERGED\" --base \"$BASE\" -- \"$LOCAL\" --snapshot \"$REMOTE\" --snapshot
-	trustExitCode = true
-[merge]
-	tool = Kaleidoscope
-[push]
-	default = simple
+  ph = push
+  out = log @{u}..HEAD
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit
